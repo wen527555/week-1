@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header .left {
+  justify-content: flex-start;
+  flex: none;
+}
+
+header .desktop {
+  display: flex;
+  justify-content: flex-end;
+  flex: auto;
+}
+header .desktop .item {
+  flex: none;
+  width: 100px;
+  text-align: center;
+}
+
+.phone {
+  display: none;
+}
+
+.Welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: rgba(236, 227, 96, 0.329);
+}
+
+.Welcome .text {
+  width: 500px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+main {
+  margin: 10px;
+}
+
+.Promotion {
+  display: flex;
+  justify-content: center;
+}
+
+.Promotion .one {
+  display: flex;
+  width: 580px;
+  margin: 10px;
+  height: auto;
+  background-color: rgba(236, 227, 96, 0.329);
+  align-items: center;
+}
+
+.Promotion .one img {
+  width: 80px;
+}
+
+.Promotion .one p {
+  padding-left: 0.5rem;
+}
+
+.Titletop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Titlebottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Title .two {
+  flex: none;
+  width: 280px;
+  margin: 10px;
+  background-color: rgba(236, 227, 96, 0.329);
+}
+
+.Title .two img {
+  object-fit: cover;
+  object-position: center;
+  width: 280px;
+  height: auto;
+}
+
+.Title .two p {
+  text-align: center;
+}
+
+/* 螢幕寬度小於1200px,套用這個css */
+@media (max-width: 1220px) {
+  .Title {
+    flex-wrap: wrap;
+  }
+
+  .Promotion .one {
+    width: 45%;
+  }
+  .Title .two {
+    width: 45%;
+  }
+  .Title .two img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+}
+
+/* 螢幕寬度小於600px,套用這個css */
+@media (max-width: 600px) {
+  .Promotion {
+    flex-wrap: wrap;
+  }
+
+  .Promotion .one {
+    width: 90%;
+  }
+  .Title {
+    flex-wrap: wrap;
+  }
+  .Title .two {
+    width: 90%;
+  }
+
+  header .desktop {
+    display: flex;
+    justify-content: flex-end;
+    flex: auto;
+    display: none;
+  }
+  header .desktop .item {
+    flex: none;
+    width: 100px;
+    text-align: center;
+    display: none;
+  }
+  .desktop {
+    display: none;
+  }
+
+  .phone {
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    padding-right: 0.25rem;
+    display: block;
+  }
+}
